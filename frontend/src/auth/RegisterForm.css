@@ -1,0 +1,372 @@
+/* RegisterForm.css — High-end ecommerce signup styling for Maasai Sandals
+   Matches classes used in src/auth/RegisterForm.jsx
+   Brand primary: #4a2707
+*/
+
+/* ---------- Variables ---------- */
+:root{
+  --brand: #4a2707;
+  --brand-600: #6a3d18;
+  --accent: #c68a56;
+  --muted: #7a6a62;
+  --glass: rgba(255,255,255,0.92);
+  --bg: #fffaf7;
+  --card-bg: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,249,244,0.98));
+  --shadow-soft: 0 8px 30px rgba(12,12,12,0.08);
+  --shadow-strong: 0 18px 50px rgba(12,12,12,0.14);
+  --radius: 14px;
+  --max-w: 1100px;
+  --glass-border: 1px solid rgba(74,39,7,0.06);
+  --input-border: 1px solid rgba(10,10,10,0.06);
+  --error-red: #d94b4b;
+  --success-green: #1f8a49;
+  --transition-fast: 160ms;
+  --transition: 240ms;
+  font-synthesis: none;
+}
+
+/* ---------- Page Title ---------- */
+.register-title{
+  text-align: center;
+  font-family: "Poppins", Inter, system-ui, -apple-system, 'Segoe UI', Roboto, "Helvetica Neue", Arial;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--brand);
+  margin: 28px 0 6px;
+  font-size: 1.25rem;
+}
+
+/* ---------- Outer layout ---------- */
+.register-container{
+  width: 94%;
+  max-width: var(--max-w);
+  margin: 18px auto 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 34px;
+  align-items: stretch;
+  min-height: 540px;
+  padding: 80px;
+}
+
+/* Left visual pane */
+.signup-left{
+  border-radius: var(--radius);
+  background:
+    linear-gradient(160deg, rgba(74,39,7,0.06), rgba(74,39,7,0.02)),
+    url('/img/Handcrafted.png');
+  background-size: cover;
+  background-position: center;
+  box-shadow: var(--shadow-strong);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 480px;
+}
+
+/* If you don't have an image, gradient + accent content shows */
+.signup-left::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10,10,10,0.08), rgba(255,255,255,0.02));
+  pointer-events: none;
+}
+
+/* optional overlay content area (designer can place hero copy) */
+.signup-left .signup-overlay{
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding: 28px;
+  max-width: 420px;
+}
+/* Example overlay style */
+.signup-left .signup-overlay h3{
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 0 6px 22px rgba(12,12,12,0.4);
+}
+.signup-left .signup-overlay p{
+  color: rgba(255,255,255,0.9);
+  margin-top: 8px;
+  font-size: 0.95rem;
+}
+
+/* Right form pane (card) */
+.signup-right{
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 32px;
+  box-shadow: var(--shadow-soft);
+  border: var(--glass-border);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 480px;
+}
+
+/* Headings inside form */
+.signup-right h2{
+  margin: 0 0 6px;
+  font-size: 1.3rem;
+  color: #231815;
+  letter-spacing: -0.02em;
+}
+.signup-right > span { display:block; margin-bottom: 12px; color: var(--muted); font-size: 0.95rem; }
+
+/* server error banner */
+.error-text{
+  background: linear-gradient(90deg, rgba(217,75,75,0.08), rgba(217,75,75,0.02));
+  border-left: 4px solid rgba(217,75,75,0.14);
+  color: var(--error-red);
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin: 10px 0 14px;
+  font-weight: 600;
+}
+
+/* success text (if used) */
+.success-text{
+  background: linear-gradient(90deg, rgba(31,138,73,0.06), rgba(31,138,73,0.02));
+  border-left: 4px solid rgba(31,138,73,0.14);
+  color: var(--success-green);
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin: 10px 0 14px;
+  font-weight: 700;
+}
+
+/* ---------- Form ---------- */
+.signup-form {
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Form group wrapper - helps for field-level spacing */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+}
+
+/* Input base styles */
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid rgba(10,10,10,0.06);
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #24160f;
+  transition: box-shadow var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+  box-shadow: 0 6px 18px rgba(12,12,12,0.04);
+}
+
+/* placeholder colour */
+.signup-form input::placeholder { color: #b9a69a; }
+
+/* focus */
+.signup-form input:focus {
+  outline: none;
+  border-color: rgba(198,138,86,0.45);
+  box-shadow: 0 12px 30px rgba(198,138,86,0.06);
+  transform: translateY(-1px);
+}
+
+/* small helper/error text */
+.form-group .error-text {
+  font-size: 13px;
+  color: var(--error-red);
+  margin-top: 6px;
+  background: none;
+  border: 0;
+  padding: 0;
+}
+
+/* input success / error border helpers applied by getInputClass */
+input.success {
+  border-color: rgba(31,138,73,0.20);
+  box-shadow: 0 8px 20px rgba(31,138,73,0.05);
+}
+input.error {
+  border-color: rgba(217,75,75,0.18);
+  box-shadow: 0 8px 18px rgba(217,75,75,0.04);
+}
+
+/* shake animation (for invalid fields) */
+.shake {
+  animation: shake 420ms cubic-bezier(.36,.07,.19,.97);
+}
+@keyframes shake {
+  10%, 90% { transform: translateX(-1px); }
+  20%, 80% { transform: translateX(2px); }
+  30%, 50%, 70% { transform: translateX(-4px); }
+  40%, 60% { transform: translateX(4px); }
+}
+
+/* ---------- Password input with toggle icon ---------- */
+.has-icon { position: relative; }
+
+.password-toggle {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  padding: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+.password-toggle:hover,
+.password-toggle:focus {
+  background: rgba(74,39,7,0.06);
+  color: var(--brand);
+  outline: none;
+}
+
+/* icons inside toggle — ensure they don't show default button focus outlines */
+.password-toggle .fa { font-size: 14px; pointer-events: none; }
+
+/* ---------- Terms & submit ---------- */
+.acceptedTerms {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 6px;
+  color: #3b2b25;
+  font-size: 14px;
+  cursor: pointer;
+}
+.acceptedTerms input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--brand);
+}
+
+/* Primary button group */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+}
+
+/* primary action */
+.btn.primary {
+  background: linear-gradient(180deg, var(--brand), var(--brand-600));
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(74,39,7,0.18);
+}
+.btn.primary:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 46px rgba(74,39,7,0.22);
+}
+
+/* disabled */
+.btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* small divider and social buttons */
+.divider {
+  text-align: center;
+  color: var(--muted);
+  margin: 6px 0 8px;
+  font-size: 14px;
+}
+
+/* social: Google / Facebook / Apple */
+.btn.google { background: #fff; color: #202020; border: 1px solid rgba(10,10,10,0.06); }
+.btn.facebook { background: #1877f2; color: #fff; }
+.btn.apple { background: #111; color: #fff; }
+
+/* social hover states */
+.btn.google:hover { box-shadow: 0 8px 26px rgba(0,0,0,0.06); transform: translateY(-3px); }
+.btn.facebook:hover { background: #125dcc; transform: translateY(-3px); }
+.btn.apple:hover { background: #0a0a0a; transform: translateY(-3px); }
+
+/* Social icons spacing */
+.btn .fa { font-size: 14px; }
+
+/* ---------- Prompt and small text ---------- */
+.signup-prompt {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.loginhere-link {
+  color: var(--brand);
+  font-weight: 700;
+  text-decoration: none;
+}
+.loginhere-link:hover { text-decoration: underline; }
+
+/* ---------- Accessibility - focus rings for keyboard users ---------- */
+.signup-form input:focus,
+.btn:focus,
+.password-toggle:focus,
+.loginhere-link:focus {
+  outline: 3px solid rgba(198,138,86,0.12);
+  outline-offset: 3px;
+}
+
+/* ---------- Small screens (responsive) ---------- */
+@media (max-width: 992px) {
+  .register-container {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin: 10px auto 40px;
+  }
+
+  .signup-left {
+    min-height: 220px;
+    border-radius: 12px;
+    order: -1; /* show visual first on small screens */
+  }
+
+  .signup-right {
+    padding: 22px;
+    border-radius: 12px;
+  }
+}
+
+/* ---------- Tiny helpers ---------- */
+.form-group small.hint {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* If you want the background image to be optional: use a nice gradient fallback */
+.signup-left[style="background-image: none"], .signup-left.no-image {
+  background: linear-gradient(160deg, rgba(74,39,7,0.14) 0%, rgba(198,138,86,0.06) 100%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+}

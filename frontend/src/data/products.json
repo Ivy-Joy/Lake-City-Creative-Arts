@@ -1,0 +1,121 @@
+[
+  {
+    "id": "royalbrown",
+    "name": "Royal Brown Sandals",
+    "category": "men",
+    "image": "/img/menshoes/Malecategoryimage.png",
+    "price": 1200,
+    "description": "Classic brown leather Maasai sandals perfect for all high end occasions. Durable and stylish."
+  },
+  {
+    "id": "nohurryleather",
+    "name": "No Hurry Maasai Sandals",
+    "category": "men",
+    "image": "/img/menshoes/Male.png",
+    "price": 1300,
+    "description": "Stylish cross-strap design made with premium leather for long-lasting comfort."
+  },
+  {
+    "id": "cutebaby",
+    "name": "Cute Baby Sandals",
+    "category": "kids",
+    "image": "/img/kidsshoes/kidfemalecute.png",
+    "price": 950,
+    "description": "Colorful beaded sandals for young girls inspired by Maasai culture.",
+    "bestseller": true
+  },
+  {
+    "id": "roundedleather",
+    "name": "Blue Sparkling Male Sandals",
+    "category": "men",
+    "image": "/img/menshoes/BlueSparklingMale.png",
+    "price": 1150,
+    "description": "Rounded design crafted for support and elegance in every step.",
+    "bestseller": true
+  },
+  {
+    "id": "chieflylaidback",
+    "name": "Chiefly Laid-Back Sandals",
+    "category": "men",
+    "image": "/img/menshoes/ChieflyLaidBack.png",
+    "price": 1000,
+    "description": "High ranked Maasai sandals ideal for all official occasions."
+  },
+
+  {
+    "id": "cutelightblue",
+    "name": "Cute Light Blue Sandals",
+    "category": "women",
+    "image": "/img/womenshoes/cutelightblue.png",
+    "price": 1100,
+    "description": "Beautifully handcrafted with colorful blue beads and soft leather.",
+    "bestseller": true
+  },
+  {
+    "id": "cutebluecolors",
+    "name": "Cute Blue Colored Design Sandals",
+    "category": "women",
+    "image": "/img/womenshoes/cutebluecolors.png",
+    "price": 1250,
+    "description": "Elegant cute blue-patterned sandals for a bold fashion statement."
+  },
+  {
+    "id": "simpleelegant",
+    "name": "Simple Elegant Sandals",
+    "category": "women",
+    "image": "/img/womenshoes/heroA.jpeg",
+    "price": 1200,
+    "description": "Dark-toned beads for a sophisticated, modern Maasai touch."
+  },
+  {
+    "id": "fashionablylate",
+    "name": "Accepted Fashionably Late Sandals ",
+    "category": "women",
+    "image": "/img/womenshoes/womencategoryimage.png",
+    "price": 1300,
+    "description": "Gorgeous eight-bead arrangement for elegance and durability.",
+    "bestseller": true
+  },
+
+  {
+    "id": "brownleather",
+    "name": "Brown Leather Kids Sandals",
+    "category": "kids",
+    "image": "/img/kidsshoes/brownleather.jpeg",
+    "price": 900,
+    "description": "Comfortable brown leather sandals suitable for active kids."
+  },
+  {
+    "id": "casualleather",
+    "name": "Casual Leather Kids Sandals",
+    "category": "kids",
+    "image": "/img/kidsshoes/casualleather.jpeg",
+    "price": 850,
+    "description": "Soft leather build with a casual look for everyday use."
+  },
+  {
+    "id": "girlmaasai",
+    "name": "Girl Maasai Sandals",
+    "category": "kids",
+    "image": "/img/kidsshoes/girlmaasai.jpeg",
+    "price": 950,
+    "description": "Colorful beaded sandals for young girls inspired by Maasai culture.",
+    "bestseller": true
+  },
+  {
+    "id": "cuteallgenderwear",
+    "name": "Cute All Gender Wear",
+    "category": "unisex",
+    "image": "/img/unisexshoes/unisexcategoryimage.png",
+    "price": 970,
+    "description": "A unique blend of style and comfort in a unique design that fits all."
+  },
+  {
+    "id": "blueroyalunisex",
+    "name": "Blue Royal Design",
+    "category": "unisex",
+    "image": "/img/unisexshoes/Blue royal unisex.png",
+    "price": 2000,
+    "description": "A well thought design for both male and female."
+  }
+]
